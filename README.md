@@ -1,16 +1,14 @@
-### Hi there 👋
+<h2>I'm Dallas </h2>
 
-<!--
-**Dalrae1/Dalrae1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+✨ **About me** <br>
+I'm 20 years old.
 
-Here are some ideas to get you started:
+That's bout' it
+<br>
+<br>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+[![Youtube](https://img.shields.io/youtube/channel/subscribers/UCr7j0C6hZRr6fxRJMdwNO4Q?color=FF0000&logo=youtube&style=for-the-badge)](https://www.youtube.com/user/Dalrae?sub_confirmation=1)
+
+
+✨ **Github Stats** <br>
+![Github stats](https://github-readme-stats.vercel.app/api?username=dalrae1&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&bg_color=ffffff00&hide_title=true)
