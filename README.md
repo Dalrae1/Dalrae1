@@ -7,7 +7,7 @@ That's bout' it
 <br>
 <br>
 
-[![Youtube](https://img.shields.io/youtube/channel/subscribers/UCr7j0C6hZRr6fxRJMdwNO4Q?color=FF0000&logo=youtube&style=for-the-badge)](https://www.youtube.com/user/Dalrae?sub_confirmation=1)
+[![Youtube](https://img.shields.io/youtube/channel/subscribers/UCr7j0C6hZRr6fxRJMdwNO4Q?color=FF0000&logo=youtube&style=for-the-badge)](https://www.youtube.com/@Dalrae?sub_confirmation=1)
 
 
 ✨ **Github Stats** <br>
