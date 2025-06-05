@@ -140,7 +140,7 @@ Features include:
 
 - Discord: `dalrae0`
 - Website: https://dalr.ae
-- GitHub: [github.com/dalrae](https://github.com/dalrae)
+- GitHub: [github.com/Dalrae1](https://github.com/Dalrae1)
 
 
 [![Youtube](https://img.shields.io/youtube/channel/subscribers/UCr7j0C6hZRr6fxRJMdwNO4Q?color=FF0000&logo=youtube&style=for-the-badge)](https://www.youtube.com/@Dalrae?sub_confirmation=1)
