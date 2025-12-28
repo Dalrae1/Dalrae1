@@ -1,150 +1,121 @@
-# 👋 Hi, I'm Dallas (a.k.a. Dalrae)
+# Dallas Fischer (Dalrae)
 
-I'm a passionate **Software Developer** building multiplayer systems, backend tools, and immersive game mechanics — especially in **FiveM** and real-time environments.
-
----
-
-## 🧠 About Me
-
-- 🔧 Focused on **reverse engineeering**, **server-side logic**, **game scripting**, and **performance optimization**
-- 🎮 Creator of custom **FiveM** game modes and server systems
-- 🌐 Fluent in:
-  - `JavaScript`, `TypeScript`, `Lua`, `PHP`, `MySQL`
-- ⚙️ Tools I use daily:
-  - `VSCode`, `Docker`, `Postman`, `NGINX`, `txAdmin`
-
-## 🛠️ Projects I'm Proud Of
-
-### 🛡️ Protect The President – FiveM Server  
-A fully custom, performance-focused **team-based multiplayer game mode** for FiveM. One team escorts the President to safety while the other attempts to eliminate them.  
-Built entirely from scratch with scalability, efficiency, and real-time sync as core goals.
+I am a software engineer focused on **distributed systems, real-time simulation, and multiplayer architecture**, with particular emphasis on **authoritative server design**, **latency compensation**, and **performance-critical gameplay systems**. My work spans backend engineering, networking, and game systems, with a strong bias toward first-principles design over framework dependency.
 
 ---
 
-#### 🔧 Core Features
+## Technical Focus
 
-- 🧠 **Custom Game Logic**  
-  Fully managed round lifecycle, player states, escort objectives, and team role enforcement.
+- Real-time authoritative multiplayer systems  
+- Server-side simulation and deterministic game logic  
+- Client-side prediction, interpolation, and reconciliation  
+- Bandwidth-aware state replication and spatial partitioning  
+- Behavioral anomaly detection and anti-cheat systems  
+- Reverse engineering of closed systems via instrumentation and observation  
 
-- 🛡️ **Integrated Anticheat System**  
-  Detects and logs known abuse patterns such as movement exploits and unauthorized menu usage.
-
-- 🕓 **Dynamic Time Scaling**  
-  In-game time can speed up or slow down depending on gameplay phase (e.g., accelerated nights).
-
-- 🗺️ **Map Logic & Safe Zones**  
-  Dynamically restricts areas, defines escort paths, and adapts logic for multiple supported maps.
-
-- 👥 **Real-Time Discord Role Syncing**  
-  Player permissions mirror their Discord roles and update live with any changes — no relogging required.
+**Languages:**  
+JavaScript · TypeScript · Lua · PHP · MySQL
 
 ---
 
-#### 🛠️ System Architecture
+## Projects
 
-- 💼 **VIP Menu Built with RageUI**  
-  Designed for performance — avoids the overhead of vMenu by using a custom RageUI implementation for faster, smoother interaction.
+### Protect The President - Custom FiveM Multiplayer Platform
 
-- 💬 **HTML/CSS-Based UI (nUI)**  
-  All in-game text and interface elements use HTML and CSS via nUI — not FiveM natives like `DrawText` — for significantly better performance and resolution scaling.
+**Protect The President** is a fully original, team-based multiplayer game mode for FiveM, engineered from the ground up without reliance on ESX, vRP, or other prebuilt frameworks.
 
-- 🌍 **Seamless Multi-Map Transitions**  
-  Supports smooth switching between:
-  - **Cayo Perico**
-  - **North Yankton**
-  - **Roxwood (custom map)**  
-  Transitions are handled cleanly with asset preloading, dimension handling, and minimal disruption to gameplay.
+The system models a constrained adversarial escort scenario in which one team is responsible for safely extracting a high-value player entity while an opposing team attempts interdiction. The architecture prioritizes **determinism, scalability, and low-latency state coherence**.
 
-- 📊 **Telemetry & Logging**  
-  Tracks round stats such as player kills, mission outcomes, and time survived for review and analytics.
+#### Core Systems
 
-- 💬 **Configurable Broadcast System**  
-  Displays round transitions, role assignments, and important match messages using the HTML UI system.
+- **Authoritative Game State Management**  
+  Complete server ownership of round lifecycle, player roles, win conditions, and mission state. Client authority is intentionally minimized.
 
-- 🎮 **Loadouts & Spawn Management**  
-  Player equipment, spawn locations, and objectives are fully server-defined and scenario-dependent.
+- **Dynamic Temporal Simulation**  
+  In-game time progression is modulated based on gameplay phase to improve pacing and visibility while maintaining immersion.
 
-- ⚙️ **Optimized Server Tick Handling**  
-  Avoids unnecessary processing to maintain high performance, even under heavy load.
+- **Behavior-Driven Anti-Cheat**  
+  Detects movement anomalies, input inconsistencies, and unauthorized UI usage through server-side heuristics rather than signature matching.
 
----
+- **Real-Time Discord Role Synchronization**  
+  Player permissions are continuously reconciled against live Discord role state without requiring reconnects.
 
-> Every element of this mode is custom-coded — no dependencies on ESX, vRP, or FiveM's default frameworks. Designed for immersive, replayable gameplay with minimal latency and maximum polish.
+- **Scenario-Aware Loadout and Spawn Logic**  
+  Equipment, objectives, and spawn topology are derived from server-defined scenario graphs rather than static configuration.
 
-#### ⚙️ System Architecture
+#### Architecture & Performance
 
-- 🔁 **Async Player Syncing**  
-  Custom-built movement and state syncing optimized for lower bandwidth usage, especially useful during larger player counts or high ping situations.
+- **Custom RageUI-Based VIP Interface**  
+  Purpose-built UI avoids the overhead of general-purpose menu frameworks and minimizes client tick cost.
 
-- 🛡️ **Anticheat Layer**  
-  Detects abnormal patterns in movement, shooting, and menu usage. Suspicious behavior is logged and relayed to staff in real-time.
+- **HTML/CSS nUI Rendering Pipeline**  
+  All text and interface elements are rendered via nUI rather than native draw calls, enabling resolution independence, richer layout control, and improved performance.
 
-- 🕓 **Dynamic Time System**  
-  In-game time accelerates or slows down based on scenario (e.g., night cycles are shortened for better visibility and pacing).
+- **Multi-Map World Transitions**  
+  Seamless transitions between Cayo Perico, North Yankton, and custom environments using asset preloading, routing buckets, and controlled state migration.
 
----
+- **Telemetry & Instrumentation**  
+  Server-side collection of round metrics (survival time, eliminations, mission outcomes) for analytics and balancing.
 
-> All core systems are original and custom-written — no reliance on prebuilt frameworks like ESX or vRP. The result is a cleaner, faster, and purpose-built game mode.
+- **Tick-Conscious Server Design**  
+  Systems are structured to avoid unnecessary per-frame evaluation, maintaining stability under high player concurrency.
 
-
-#### 🛠️ Server Systems:
-- 📊 Integrated telemetry for round data (e.g., time survived, kills, mission outcomes)  
-- 💬 Configurable event broadcasts and messages for round transitions  
-- 🎮 Uses server-defined loadouts, player spawning locations, and mission objectives  
-- ⚙️ Built with performance in mind — avoids unnecessary server ticks and keeps client-side processing lean
-
-> This project has been in continuous development with unique branding, gameplay structure, and full Discord + shop integration. Every element is tailored to this game mode — not a mod of existing FiveM frameworks.
-
-### 🌐 Locales Translator  
-Simple tool to convert config locales across 25+ languages with batch support.
-
-### 🌀 Interpolation Engine  
-Smooth player movement and ping compensation using predictive positioning.
-
-### 🧮 SQL Batch Optimizer  
-Reduces individual queries via queue batching and prioritized writes.
-
-### 🎥 Camera Tweener for FiveM  
-Cinematic camera transitions for scenes, cutscenes, and dynamic player focus.
-
-### ⚡ Powerline.io Server Emulator  
-A fully custom, reverse-engineered **Powerline.io multiplayer server** built from the ground up — without access to the original codebase.  
-
-Features include:
-- 🔄 **Multiplayer sync** with real-time interpolation and client input buffering  
-- 🐍 Custom snake growth logic, directional input handling, and tight movement physics  
-- ⚔️ PvP tail collision detection with optimized spatial queries  
-- 🧠 Intelligent broadcasting system using view frustum culling and quad-based partitioning  
-- 📊 Developer tools for live telemetry, player diagnostics, and frame replay  
-- 🪄 Built-in **macro scripting** engine for automated movement paths and testing  
-- 💬 Server-side chat, player states, join/leave broadcasting, and anti-cheat hooks  
-- ⚙️ Configurable game rules: growth rate, tail decay, collision radius, and rubberbanding  
-- 🧪 Designed for high concurrency testing with minimal latency simulation
-
-> ⚠️ All gameplay logic, networking, and sync were reverse-engineered from live observation and packet captures — no use of original backend source assets.
+This project is a long-running, continuously evolved codebase with distinct branding, integrated commerce, and live operations support.
 
 ---
 
-## 🧊 Fun Facts
+### Powerline.io — Server Emulator (Reverse Engineered)
 
-- 🧠 I reverse-engineered **Powerline.io** and built a functioning server emulator from scratch  
-- 📐 I wrote a script that uses **parametric curves** to let snakes draw any path using only key inputs  
-- 🔍 I implemented a full **input recorder/replayer** to analyze user movement frame-by-frame  
-- 🛡️ I've scripted anticheat, player syncing, and AI behavior for multiplayer games  
-- 🕹️ Built systems that simulate **client-side prediction** and **server reconciliation**  
-- 🔥 I love making things **feel smooth** — even in a multiplayer world  
-- 🧩 I treat game logic like puzzle-solving and love untangling complex systems  
+A complete, ground-up **server emulator for Powerline.io**, developed without access to the original backend code.
+
+The system reconstructs gameplay, networking behavior, and synchronization semantics exclusively through live observation, packet analysis, and controlled experimentation.
+
+Key components include:
+
+- Authoritative multiplayer simulation with client input buffering  
+- Predictive interpolation and latency compensation  
+- Spatial partitioning via quad-based indexing for collision detection  
+- High-throughput broadcast filtering using view-frustum culling  
+- Deterministic PvP tail-collision resolution  
+- Macro scripting engine for automated movement and testing  
+- Live telemetry, diagnostics, and frame-level replay tooling
+
+All gameplay logic, networking, and synchronization were independently derived. No proprietary server assets or source code were used.
+
 ---
 
-## 📫 Let's Connect
+## Supporting Systems & Tooling
 
-- Discord: `dalrae0`
-- Website: https://dalr.ae
-- GitHub: [github.com/Dalrae1](https://github.com/Dalrae1)
+- **Interpolation Engine**  
+  Predictive positioning and smoothing for high-latency multiplayer scenarios.
 
+- **SQL Batch Optimizer**  
+  Queue-based write aggregation to reduce transactional overhead under load.
 
-[![Youtube](https://img.shields.io/youtube/channel/subscribers/UCr7j0C6hZRr6fxRJMdwNO4Q?color=FF0000&logo=youtube&style=for-the-badge)](https://www.youtube.com/@Dalrae?sub_confirmation=1)
+- **Camera Tweening System (FiveM)**  
+  Deterministic cinematic camera transitions for scripted scenes and dynamic focus.
 
+- **Locales Translation Pipeline**  
+  Batch conversion of configuration files across 25+ languages.
 
-✨ **Github Stats** <br>
-![Github stats](https://github-readme-two-gamma.vercel.app/api?username=dalrae1&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&bg_color=ffffff00&hide_title=true)
+---
+
+## Engineering Philosophy
+
+I approach game systems as **distributed simulations**, not scripts.
+
+My design principles emphasize:
+- Explicit state ownership  
+- Measurable performance characteristics  
+- Minimal abstraction leakage  
+- Graceful degradation under load  
+
+I am particularly interested in the boundary between **client perception** and **server truth**, and how careful engineering can make that boundary effectively invisible to players.
+
+---
+
+## Contact
+
+- **Discord:** dalrae0  
+- **Website:** https://dalr.ae  
+- **GitHub:** https://github.com/Dalrae1
